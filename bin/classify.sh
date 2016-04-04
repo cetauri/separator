@@ -1,0 +1,1 @@
+java -cp ../target/separator-core-1.0-SNAPSHOT-jar-with-dependencies.jar kr.co.irskorea.separator.Classifier ../model/model ../model/labelindex ../model/data-vectors/dictionary.file-0 ../model/data-vectors/df-count/part-r-00000 $1

@@ -1,0 +1,11 @@
+/target
+/raw
+/data
+/2016
+
+.idea/
+*.iml
+
+model/
+
+news_2016.zip
