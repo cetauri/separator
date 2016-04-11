@@ -8,4 +8,7 @@
 
 model/
 
+bin/model
+bin/temp
+sql
 news_2016.zip
