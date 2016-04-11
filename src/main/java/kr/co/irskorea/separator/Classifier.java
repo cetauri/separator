@@ -65,7 +65,7 @@ public class Classifier {
 	//java -cp ./classification-1.0-SNAPSHOT-jar-with-dependencies.jar project.bayes.Classifier /Users/cetauri/playground/irskorea/classfication/bin/model /Users/cetauri/playground/irskorea/classfication/bin/labelindex /Users/cetauri/playground/irskorea/classfication/bin/data-vectors/dictionary.file-0 /Users/cetauri/playground/irskorea/classfication/bin/data-vectors/df-count/part-r-00000 /Users/cetauri/playground/irskorea/classfication/data/정치/13880
 	public static void main(String[] args) throws Exception {
 		if (args.length < 5) {
-			System.out.println("Arguments: [model] [label index] [dictionnary] [document frequency] [tweet file]");
+			System.out.println("Arguments: [model] [label index] [dictionnary] [document frequency] [source file]");
 			return;
 		}
 		String modelPath = args[0];
