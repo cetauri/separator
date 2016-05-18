@@ -50,7 +50,7 @@ public class CreateSequenceFileFromArtists {
             try{
 
 //                line = br.readLine();
-//                temp = line.split(delimiter);
+//                temp = line.splitDataSet(delimiter);
                 temp = StringUtils.split(line, delimiter);
                 value = new Text();
                 tempvalue = "";
@@ -76,8 +76,8 @@ public class CreateSequenceFileFromArtists {
 //            {
 //
 ////                line = br.readLine();
-////                temp = line.split(delimiter);
-//                temp = StringUtils.split(line, delimiter);
+////                temp = line.splitDataSet(delimiter);
+//                temp = StringUtils.splitDataSet(line, delimiter);
 //                System.out.println("delimiter : "+delimiter);
 //                System.out.println("temp : "+temp.toString());
 //                value = new Text();

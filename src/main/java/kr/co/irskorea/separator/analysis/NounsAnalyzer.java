@@ -16,14 +16,14 @@ import java.util.List;
 /**
  * Created by cetauri on 16. 4. 4..
  */
-public class NounsAnalyzer {
+public class NounsAnalyzer extends KoreanAnalyzer{
 
     public List<String> getNouns(String text) throws IOException {
 
-        KoreanAnalyzer analyzer = new KoreanAnalyzer(Version.LUCENE_46);
+//        KoreanAnalyzer analyzer = new KoreanAnalyzer(Version.LUCENE_46);
         MorphAnalyzer ma = new MorphAnalyzer();
 
-        TokenStream ts = analyzer.tokenStream(null, new StringReader(text));
+        TokenStream ts = tokenStream(null, new StringReader(text));
         CharTermAttribute termAtt = ts.addAttribute(CharTermAttribute.class);
 
         List<String> list = new ArrayList<>();
