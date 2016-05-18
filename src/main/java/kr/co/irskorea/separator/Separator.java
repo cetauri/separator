@@ -28,9 +28,6 @@ public class Separator {
     private final String PATH_DATA_TRAIN_VECTORS = "data-train-vectors";
     private final String PATH_DATA_TEST_VECTORS = "data-test-vectors";
 
-//    private final String PATH_DATA_TESTING_TRAIN = "data-testing-train";
-//    private final String PATH_DATA_TESTING_TEST = "data-testing-test";
-
     private final String PATH_MODEL = "model";
     private final String PATH_LABEL_INDEX = "labelindex";
     private final String PATH_TEMP = "temp";

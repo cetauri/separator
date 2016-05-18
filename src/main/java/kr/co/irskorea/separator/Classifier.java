@@ -111,7 +111,6 @@ public class Classifier {
 		Map<Integer, Long> documentFrequency = readDocumentFrequency(configuration, new Path(documentFrequencyPath));
 
 
-		// analyzer used to extract word from tweet
 //		Analyzer analyzer = new StandardAnalyzer(Version.LUCENE_43);
 		Analyzer analyzer = new NounsAnalyzer();
 
@@ -129,7 +128,7 @@ public class Classifier {
 
 			Multiset<String> words = ConcurrentHashMultiset.create();
 
-			// extract words from tweet
+			// extract words from document
 			TokenStream ts = analyzer.tokenStream("text", new StringReader(line));
 			CharTermAttribute termAtt = ts.addAttribute(CharTermAttribute.class);
 			ts.reset();
@@ -163,23 +162,14 @@ public class Classifier {
 			}
 
 			// With the classifier, we get one score for each label
-			// The label with the highest score is the one the tweet is more likely to
+			// The label with the highest score is the one the document is more likely to
 			// be associated to
 			Vector resultVector = classifier.classifyFull(vector);
-
-//			double bestScore = -Double.MAX_VALUE;
-//			int bestCategoryId = -1;
 			for(Element element: resultVector.all()) {
 				int categoryId = element.index();
 				double score = element.get();
-//				if (score > bestScore) {
-//					bestScore = score;
-//					bestCategoryId = categoryId;
-//				}
-//				System.out.println(labels.get(categoryId) + ": " + score);
 				returnMap.put(labels.get(categoryId), score);
 			}
-//			System.out.println(labels.get(bestCategoryId));
 
 		}
 		analyzer.close();
